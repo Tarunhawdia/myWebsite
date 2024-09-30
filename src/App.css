@@ -1,0 +1,31 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.inside-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    flex-wrap: nowrap;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding-top: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+}
