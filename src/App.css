@@ -10,7 +10,34 @@
 .navbar {
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
     border-bottom: 0.125rem solid grey;
+}
+
+.Tarun_Hawdia {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-links {
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: red;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: lightgray;
 }
 
 .Tarun_Hawdia {
