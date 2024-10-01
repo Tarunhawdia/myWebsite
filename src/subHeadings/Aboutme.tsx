@@ -9,6 +9,11 @@ const AboutMe: React.FC = () => {
       <p>
         Hi! I am Tarun, a software developer working at ArthmateTech Pvt. Ltd.
       </p>
+      <p>
+        Although I do not have a CS degree, I am obsessed with computer science.
+        I got most of my knowledge by watching YouTube videos, taking online
+        courses, and traversing Wikipedia graphs.
+      </p>
     </section>
   );
 };

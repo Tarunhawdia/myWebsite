@@ -1,8 +1,7 @@
 import "./App.css";
-import pic from "./assets/pic.jpg";
-import logo from "./assets/logo_stc.png";
 import AboutMe from "./subHeadings/Aboutme"; 
 import Projects from "./subHeadings/Projects"; 
+import Education from "./subHeadings/Education";
 
 function App() {
   return (
@@ -43,11 +42,15 @@ function App() {
               <li>
                 <a href="#projects">Projects</a>
               </li>
+              <li>
+                <a href="#Education">Education</a>
+              </li>
             </ul>
           </div>
           <div className="section_main">
             <AboutMe/>
             <Projects/>
+            <Education/>
           </div>
         </div>
       </div>
