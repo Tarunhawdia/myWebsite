@@ -1,16 +1,16 @@
-.body,
-html {
-    font-family: Fira Sans Extra Condensed, sans-serif;
+html,
+body {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     height: 100%;
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
+    font-size: 20px;
 }
 
 body {
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -23,10 +23,4 @@ a,
 span,
 div {
     color: white;
-    /* Ensure all text elements are white */
-}
-
-a {
-    color: lightblue;
-    /* Optional: Adjust link color for better visibility */
 }
