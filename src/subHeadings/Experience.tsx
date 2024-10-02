@@ -8,7 +8,8 @@ const Experience: React.FC = () => {
       title: "Software Engineer",
       period: "July 2024 - Present",
       description: [
-        "Developed and maintained backend services using Node.js and MongoDB.",
+        "Engineered and optimized backend services using Node.js and MongoDB for high performance.",
+        "Enhanced user experience by developing responsive and dynamic UIs with React.",
         "Worked on microservices architecture and implemented REST APIs.",
         "Collaborated with front-end developers to integrate with React components.",
       ],
