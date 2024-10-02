@@ -2,6 +2,7 @@ import "./App.css";
 import AboutMe from "./subHeadings/Aboutme"; 
 import Projects from "./subHeadings/Projects"; 
 import Education from "./subHeadings/Education";
+import Experience from "./subHeadings/Experience";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
                 <a href="#about">About Me</a>
               </li>
               <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
                 <a href="#projects">Projects</a>
               </li>
               <li>
@@ -49,6 +53,7 @@ function App() {
           </div>
           <div className="section_main">
             <AboutMe/>
+            <Experience/>
             <Projects/>
             <Education/>
           </div>
