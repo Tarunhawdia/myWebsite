@@ -153,43 +153,68 @@
     color: red;
 }
 
+.menu-button {
+    display: none;
+    /* Hide the menu button on large screens */
+}
+
+.sidebar {
+    display: block;
+}
+
 @media (max-width: 768px) {
-    .inside-container {
-        display: flex;
-        flex-direction: column;
+    .menu-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #333;
+        color: white;
+        padding: 0.5rem;
+        border: none;
+        cursor: pointer;
+        display: block;
+        /* Show the menu button on small screens */
     }
 
     .sidebar {
-        position: relative;
-        width: 100%;
-        padding: 1rem 0;
-        order: 1;
+        display: none;
+        /* Hide sidebar by default on small screens */
+    }
+
+    .sidebar.open {
+        display: block;
+        /* Show sidebar when menu is toggled */
+        position: absolute;
+        top: 50px;
+        /* Adjust to appear below the menu button */
+        left: 10px;
+        width: calc(100% - 20px);
+        /* Full width minus padding */
+        background-color: #f4f4f4;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 1rem;
+    }
+
+    .sidebar ul li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     .section_main {
-        width: 100%;
+        margin-left: 0;
         padding-left: 1rem;
         padding-right: 1rem;
-        order: 2;
-    }
-
-    .inside-container {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .project_tile {
-        flex-direction: column;
-        padding: 1rem 0;
-    }
-
-    .project_info {
-        padding-left: 0;
-        padding-top: 1rem;
-    }
-
-    .menu-button {
-        display: block;
     }
 
     .navbar {

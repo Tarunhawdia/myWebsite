@@ -1,10 +1,17 @@
+import { useState } from "react";
 import "./App.css";
-import AboutMe from "./subHeadings/Aboutme"; 
-import Projects from "./subHeadings/Projects"; 
+import AboutMe from "./subHeadings/Aboutme";
+import Projects from "./subHeadings/Projects";
 import Education from "./subHeadings/Education";
 import Experience from "./subHeadings/Experience";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       <div className="main-container">
@@ -34,8 +41,14 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="inside-container">
-          <div className="sidebar">
+
+        {/* Menu button for small screens */}
+        <button className="menu-button" onClick={toggleMenu}>
+          ☰ MENU
+        </button>
+
+        <div className="inside_container">
+          <div className={`sidebar ${menuOpen ? "open" : ""}`}>
             <ul>
               <li>
                 <a href="#about">About Me</a>
@@ -51,11 +64,12 @@ function App() {
               </li>
             </ul>
           </div>
+
           <div className="section_main">
-            <AboutMe/>
-            <Experience/>
-            <Projects/>
-            <Education/>
+            <AboutMe />
+            <Experience />
+            <Projects />
+            <Education />
           </div>
         </div>
       </div>
