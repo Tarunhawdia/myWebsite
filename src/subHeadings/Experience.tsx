@@ -18,8 +18,8 @@ const Experience: React.FC = () => {
       title: "Project Trainee and Intern",
       period: "May 2018 - July 2018",
       description: [
-        "Assisted in the development of full-stack web applications.Designed and programmed a line-following robot using Arduino Uno, demonstrating embedded C expertise.",
-        "Participated in code reviews and collaborated on project management.Built an obstacle-avoiding robot with Arduino Uno and infrared sensors, programmed in C."
+        "Assisted in the development of full-stack web applications.       Designed and programmed a line-following robot using Arduino Uno, demonstrating embedded C expertise.",
+        "I have build several project one of them was an obstacle-avoiding robot with Arduino Uno and infrared sensors, programmed in C."
       ],
     },
   ];
