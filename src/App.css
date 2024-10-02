@@ -59,6 +59,7 @@
     position: fixed;
     overflow-y: auto;
     height: 100vh;
+    display: block;
 }
 
 .sidebar ul {
@@ -155,11 +156,22 @@
 
 .menu-button {
     display: none;
-    /* Hide the menu button on large screens */
 }
 
-.sidebar {
-    display: block;
+.go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: red;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -173,23 +185,18 @@
         border: none;
         cursor: pointer;
         display: block;
-        /* Show the menu button on small screens */
     }
 
     .sidebar {
         display: none;
-        /* Hide sidebar by default on small screens */
     }
 
     .sidebar.open {
         display: block;
-        /* Show sidebar when menu is toggled */
         position: absolute;
         top: 50px;
-        /* Adjust to appear below the menu button */
         left: 10px;
         width: calc(100% - 20px);
-        /* Full width minus padding */
         background-color: #f4f4f4;
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -237,5 +244,9 @@
         margin-right: 0;
         justify-content: center;
         width: 100%;
+    }
+
+    .go-to-top{
+        padding: 0.3rem;
     }
 }

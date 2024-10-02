@@ -12,6 +12,17 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div className="main-container">
@@ -51,16 +62,24 @@ function App() {
           <div className={`sidebar ${menuOpen ? "open" : ""}`}>
             <ul>
               <li>
-                <a href="#about">About Me</a>
+                <a href="#about" onClick={closeMenu}>
+                  About Me
+                </a>
               </li>
               <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" onClick={closeMenu}>
+                  Experience
+                </a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" onClick={closeMenu}>
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#Education">Education</a>
+                <a href="#Education" onClick={closeMenu}>
+                  Education
+                </a>
               </li>
             </ul>
           </div>
@@ -71,6 +90,9 @@ function App() {
             <Projects />
             <Education />
           </div>
+          <button className="go-to-top" onClick={goToTop}>
+            ↑ Go to Top
+          </button>
         </div>
       </div>
     </>
