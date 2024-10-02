@@ -11,7 +11,8 @@ const Projects: React.FC = () => {
       <div className="projects_container">
         <div className="project_tile">
           <a
-            href="https://github.com/Tarunhawdia/myChessApp"
+            // href="https://github.com/Tarunhawdia/myChessApp"
+            href="https://my-chess-app-one.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -24,7 +25,8 @@ const Projects: React.FC = () => {
           </a>
           <div className="project_info">
             <a
-              href="https://github.com/Tarunhawdia/myChessApp"
+              // href="https://github.com/Tarunhawdia/myChessApp"
+              href="https://my-chess-app-one.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "inherit" }}
