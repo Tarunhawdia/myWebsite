@@ -9,25 +9,24 @@
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 2rem;
+    padding: 0rem;
     border-bottom: 0.125rem solid grey;
 }
 
 .Tarun_Hawdia {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: 1rem;
+    position: relative;
 }
 
 .social-links {
-    position: absolute;
-    right: 1rem;
+    margin-right: 1rem;
     display: flex;
     gap: 1rem;
 }
+
 
 .social-links a {
     color: red;
@@ -156,20 +155,27 @@
 
 @media (max-width: 768px) {
     .inside-container {
+        display: flex;
         flex-direction: column;
     }
 
     .sidebar {
         position: relative;
-        height: auto;
         width: 100%;
         padding: 1rem 0;
         order: 1;
     }
 
     .section_main {
+        width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
+        order: 2;
+    }
+
+    .inside-container {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .project_tile {
@@ -182,15 +188,29 @@
         padding-top: 1rem;
     }
 
-    .navbar {
-        justify-content: space-between;
-    }
-
     .menu-button {
         display: block;
     }
 
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
     .Tarun_Hawdia {
-        font-size: 1.5rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        position: relative;
+        left: 0;
+        transform: none;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-right: 0;
+        justify-content: center;
+        width: 100%;
     }
 }
