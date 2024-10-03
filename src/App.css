@@ -149,6 +149,7 @@
 }
 
 .sub_headings {
+    display: flex;
     font-size: 1.875rem;
     color: red;
 }
@@ -245,7 +246,7 @@
         width: 100%;
     }
 
-    .go-to-top{
+    .go-to-top {
         padding: 0.3rem;
     }
 }
