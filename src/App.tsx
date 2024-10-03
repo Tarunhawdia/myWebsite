@@ -1,9 +1,11 @@
 import { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
 import AboutMe from "./subHeadings/Aboutme";
 import Projects from "./subHeadings/Projects";
 import Education from "./subHeadings/Education";
 import Experience from "./subHeadings/Experience";
+import Footer from "./subHeadings/Footer";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,22 +35,25 @@ function App() {
               href="https://github.com/Tarunhawdia"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-icon"
             >
-              GitHub
+              <i className="fab fa-github"></i>
             </a>
             <a
               href="https://linkedin.com/in/tarunhawdia"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-icon"
             >
-              LinkedIn
+              <i className="fab fa-linkedin"></i>
             </a>
             <a
               href="https://x.com/HawdiaTarun"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-icon"
             >
-              Twitter
+              <i className="fab fa-twitter"></i>
             </a>
           </div>
         </div>
@@ -94,6 +99,8 @@ function App() {
             ↑ Go to Top
           </button>
         </div>
+
+        <Footer />
       </div>
     </>
   );
