@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="contact">
           <h2>Contact Me</h2>
-          <p>Email: <a href="mailto:youremail@example.com">tarunhadwiya112@gmail.com</a></p>
+          <p>Email: <a href="mailto:tarunhawdiya112@gmail.com">tarunhawdiya112@gmail.com</a></p>
           <p>Location: Indore, India</p>
         </div>
       </div>
