@@ -28,9 +28,7 @@ const AboutMe: React.FC = () => {
       <p>
         Previously, I worked at Great India Bathroom Fittings, where I developed
         an Android app using React Native, Express.js, and MongoDB, and
-        integrated Google AdMob for monetization. Additionally, I have a deep
-        interest in embedded systems, demonstrated by my internship, where I
-        designed robots using Arduino.
+        integrated Google AdMob for monetization.
       </p>
       <p>
         Additionally, I have a deep interest in embedded systems, demonstrated
