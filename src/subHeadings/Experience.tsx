@@ -6,7 +6,7 @@ const Experience: React.FC = () => {
     {
       company: "ArthmateTech Pvt. Ltd.",
       title: "Software Engineer",
-      period: "July 2024 - Present",
+      period: "July 2024 - Oct 2024",
       description: [
         "Engineered and optimized backend services using Node.js and MongoDB for high performance.",
         "Enhanced user experience by developing responsive and dynamic UIs with React.",
