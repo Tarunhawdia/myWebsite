@@ -20,9 +20,9 @@ const Experience: React.FC = () => {
       period: "Mar 2021 - Apr 2022",
       description: [
         "Worked on Android app on the play store that displays the latest prices of metals such as Zinc, Brass, etc",
-        "Enhanced user experience by developing responsive and dynamic UIs with React.Successfully integrated Google AdMob to monetize the app with targeted advertisements",
+        "Enhanced user experience by developing responsive and dynamic UIs with React. Successfully integrated Google AdMob to monetize the app with targeted advertisements",
         "Worked on microservices architecture and implemented REST APIs.",
-        "Collaborated with front-end developers to integrate with React components.Developed the app using React Native for the frontend, Express.js for the Backend and MongoDB as NOSQL DB",
+        "Collaborated with front-end developers to integrate with React components. Developed the app using React Native for the frontend, Express.js for the Backend and MongoDB as NOSQL DB",
       ],
     },
     {
@@ -30,7 +30,7 @@ const Experience: React.FC = () => {
       title: "Project Trainee and Intern",
       period: "May 2018 - July 2018",
       description: [
-        "Assisted in the development of full-stack web applications.       Designed and programmed a line-following robot using Arduino Uno, demonstrating embedded C expertise.",
+        "Assisted in the development of full-stack web applications. Designed and programmed a line-following robot using Arduino Uno, demonstrating embedded C expertise.",
         "I have build several project one of them was an obstacle-avoiding robot with Arduino Uno and infrared sensors, programmed in C.",
       ],
     },
