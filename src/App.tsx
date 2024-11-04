@@ -32,10 +32,21 @@ function App() {
           <h1 className="Tarun_Hawdia">Tarun Hawdia</h1>
           <div className="social-links">
             <a
+              href="https://drive.google.com/uc?export=download&id=1DmByhOEiOvLgC6FVAFSKmf7HPSRvwnBr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              download
+              title="Resume"
+            >
+              <i className="fas fa-download"></i>
+            </a>
+            <a
               href="https://github.com/Tarunhawdia"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              title="GitHub"
             >
               <i className="fab fa-github"></i>
             </a>
@@ -44,6 +55,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              title="LinkedIn"
             >
               <i className="fab fa-linkedin"></i>
             </a>
@@ -52,6 +64,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              title="Twitter"
             >
               <i className="fab fa-twitter"></i>
             </a>
