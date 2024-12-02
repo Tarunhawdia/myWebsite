@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="contact">
           <h2>Contact Me</h2>
           <p>Email: <a href="mailto:tarunhawdiya112@gmail.com">tarunhawdiya112@gmail.com</a></p>
-          <p>Location: Indore, India</p>
+          <p>Location: Bengaluru, Karnataka, India</p>
         </div>
       </div>
     </footer>
