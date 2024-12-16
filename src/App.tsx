@@ -32,7 +32,7 @@ function App() {
           <h1 className="Tarun_Hawdia">Tarun Hawdia</h1>
           <div className="social-links">
             <a
-              href="https://drive.google.com/uc?export=download&id=1DmByhOEiOvLgC6FVAFSKmf7HPSRvwnBr"
+              href="https://drive.google.com/drive/folders/1xoFpk5gHjkW9pYoVccOJsO5IfAHzU74B?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
