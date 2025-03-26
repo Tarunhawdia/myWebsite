@@ -25,10 +25,9 @@ const AboutMe: React.FC = () => {
       </p>
 
       <p>
-        Previously, at <strong>Great India Bathroom Fittings</strong>, I built
-        an Android app backend using <strong>Express.js</strong>, integrating{" "}
-        <strong>Google AdMob</strong> for monetization and providing real-time
-        metal price updates.
+        Previously, at Great India Bathroom Fittings, I developed a Java Spring
+        Boot backend application, integrating Google AdMob for monetization and
+        providing real-time metal price updates through RESTful APIs.
       </p>
 
       <p>
