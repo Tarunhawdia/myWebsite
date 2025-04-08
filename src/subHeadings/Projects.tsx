@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
           </a>
           <div className="project_info">
             <a
-              href="https://github.com/Tarunhawdia/Chat-app"
+              href="https://chat-app-b8ra.onrender.com/chats"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "inherit" }}
