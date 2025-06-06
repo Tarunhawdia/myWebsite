@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
       <h1 className="sub_headings">About Me</h1>
       <p>
         Hi! I’m <strong>Tarun Hawdia</strong>, a Software Developer with{" "}
-        <strong>1.6 years of experience</strong> and an academic background in{" "}
+        <strong>2+ years of experience</strong> and an academic background in{" "}
         <strong>Biomedical Science and Electrical Engineering</strong> (M.Tech
         from IIT Guwahati). Skilled in backend development (
         <strong>Java, Node.js, Golang</strong>) and frontend (
