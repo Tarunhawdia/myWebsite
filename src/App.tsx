@@ -6,6 +6,7 @@ import Projects from "./subHeadings/Projects";
 import Education from "./subHeadings/Education";
 import Experience from "./subHeadings/Experience";
 import Footer from "./subHeadings/Footer";
+import Skills from "./subHeadings/Skills";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,6 +86,11 @@ function App() {
                 </a>
               </li>
               <li>
+                <a href="#skills" onClick={closeMenu}>
+                  Skills
+                </a>
+              </li>
+              <li>
                 <a href="#experience" onClick={closeMenu}>
                   Experience
                 </a>
@@ -104,6 +110,7 @@ function App() {
 
           <div className="section_main">
             <AboutMe />
+            <Skills />
             <Experience />
             <Projects />
             <Education />
