@@ -5,6 +5,7 @@ import Projects from "./subHeadings/Projects";
 import Education from "./subHeadings/Education";
 import Experience from "./subHeadings/Experience";
 import Skills from "./subHeadings/Skills";
+import pic from "./assets/pic.jpg";
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero'); // Default to Home for first glance visibility
@@ -13,10 +14,18 @@ function App() {
     switch (activeSection) {
       case 'hero':
         return (
-          <div style={{ textAlign: 'center', padding: '50px' }}>
-            <h1>TARUN HAWDIA</h1>
-            <h3>FULL STACK ENGINEER</h3>
-            <p>Ready to deploy.</p>
+          <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+            {/* Retro Fuzzy Picture */}
+            <div className="retro-pic-container">
+              <img src={pic} alt="Tarun Hawdia" className="retro-fuzzy-pic" />
+              <div className="retro-pic-overlay"></div>
+            </div>
+
+            <div style={{ padding: '20px', zIndex: 1 }}>
+              <h1>TARUN HAWDIA</h1>
+              <h3>FULL STACK ENGINEER</h3>
+              <p>Ready to deploy.</p>
+            </div>
             
             <div style={{ marginTop: '40px', borderTop: '1px dashed var(--color-primary-dim)', paddingTop: '20px' }}>
               <h4 style={{ marginBottom: '20px' }}>COMMUNICATION CHANNELS</h4>
