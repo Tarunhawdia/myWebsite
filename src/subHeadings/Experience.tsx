@@ -1,12 +1,12 @@
 import React from "react";
-import "./Experience.css";
+// import "./Experience.css"; // Disabling old CSS to use new global theme
 
 const Experience: React.FC = () => {
   const experiences = [
     {
       company: "Data Nimbus",
       title: "Backend Developer",
-      period: "Sept 2025 - Present",
+      period: "Oct 2025 - Present",
       description: [
         "Working as a Backend Developer specializing in Golang.",
         "Implemented payment orchestration systems to streamline transaction processing.",
@@ -64,17 +64,73 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="section">
-      <h1 className="sub_headings">Experience</h1>
-      <div className="experience_container">
+    <section id="experience" style={{ paddingBottom: '50px' }}>
+      <h2 style={{ 
+        borderBottom: '2px solid var(--color-primary)', 
+        paddingBottom: '10px', 
+        marginBottom: '30px',
+        textShadow: '0 0 5px var(--color-primary)' 
+      }}>
+        /SYS/LOGS/EXPERIENCE_DATA
+      </h2>
+      
+      <div style={{ display: 'grid', gap: '40px' }}>
         {experiences.map((exp, index) => (
-          <div className="experience_tile" key={index}>
-            <h2 className="company_name">{exp.company}</h2>
-            <p className="job_title">{exp.title}</p>
-            <p className="work_period">{exp.period}</p>
-            <ul className="job_description">
+          <div key={index} style={{
+            borderLeft: '2px solid var(--color-primary-dim)',
+            paddingLeft: '20px',
+            position: 'relative'
+          }}>
+            {/* Timeline dot */}
+            <div style={{
+              position: 'absolute',
+              left: '-6px',
+              top: '0',
+              width: '10px',
+              height: '10px',
+              background: 'var(--color-primary)',
+              borderRadius: '50%',
+              boxShadow: '0 0 10px var(--color-primary)'
+            }} />
+            
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h3 style={{ margin: '0 0 5px 0', fontSize: '1.2rem', color: '#fff' }}>{exp.company}</h3>
+              <span style={{ 
+                fontFamily: 'var(--font-mono)', 
+                fontSize: '0.9rem', 
+                background: 'var(--color-primary-dim)', 
+                color: '#000', 
+                padding: '2px 8px' 
+              }}>
+                {exp.period}
+              </span>
+            </div>
+            
+            <p style={{ 
+              color: 'var(--color-primary)', 
+              margin: '5px 0 15px 0', 
+              fontStyle: 'italic',
+              fontFamily: 'var(--font-mono)'
+            }}>
+              {exp.title}
+            </p>
+            
+            <ul style={{ 
+              listStyle: 'none', 
+              padding: 0, 
+              margin: 0,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.95rem'
+            }}>
               {exp.description.map((desc, idx) => (
-                <li key={idx}>{desc}</li>
+                <li key={idx} style={{ 
+                  marginBottom: '8px', 
+                  display: 'flex', 
+                  alignItems: 'start' 
+                }}>
+                  <span style={{ marginRight: '10px', color: 'var(--color-primary-dim)' }}>{'>'}</span>
+                  <span style={{ opacity: 0.9 }}>{desc}</span>
+                </li>
               ))}
             </ul>
           </div>
