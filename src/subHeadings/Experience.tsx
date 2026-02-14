@@ -4,9 +4,19 @@ import "./Experience.css";
 const Experience: React.FC = () => {
   const experiences = [
     {
+      company: "Data Nimbus",
+      title: "Backend Developer",
+      period: "Sept 2025 - Present",
+      description: [
+        "Working as a Backend Developer specializing in Golang.",
+        "Implemented payment orchestration systems to streamline transaction processing.",
+        "Developed and managed escrow-related payment technologies.",
+      ],
+    },
+    {
       company: "Emotorad",
       title: "Software Development Engineer",
-      period: "Nov 2024 - Present",
+      period: "Nov 2024 - Sept 2025",
       description: [
         "Offered a full-time role after demonstrating strong performance as a Software Engineer Intern.",
         "Designed and set up the internal dashboard from scratch using the MERN stack with TypeScript, enabling real-time debugging and analytics of incoming data streams.",
