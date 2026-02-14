@@ -4,7 +4,7 @@ import React from "react";
 const Experience: React.FC = () => {
   const experiences = [
     {
-      company: "Data Nimbus",
+      company: "DataNimbus",
       title: "Backend Developer",
       period: "Oct 2025 - Present",
       description: [

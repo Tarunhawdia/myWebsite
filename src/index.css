@@ -289,3 +289,64 @@ a:hover {
     );
   pointer-events: none;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto; /* Allow scrolling on body if layout becomes too long */
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #root {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .sub_headings {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Tiles stack on mobile */
+  .project_tile, .college_tile {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .project_info, .college_info {
+    padding-left: 0;
+    margin-top: 15px;
+  }
+
+  .project_logo, .college_logo {
+    margin: 0 auto;
+  }
+
+  /* Retro Pic adjustment for mobile */
+  .retro-pic-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border-width: 2px;
+  }
+
+  /* Home text alignment */
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Communication links wrapping */
+  .hero-links {
+    flex-wrap: wrap;
+    gap: 15px !important;
+  }
+}
