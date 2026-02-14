@@ -1,7 +1,7 @@
 import React from "react";
 import iitglogo from "../assets/iitg.png";
 import ueculogo from "../assets/uecu.png"
-import "./Education.css";
+// import "./Education.css";
 
 const Education: React.FC = () => {
   return (
