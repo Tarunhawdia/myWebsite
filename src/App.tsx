@@ -1,128 +1,61 @@
 import { useState } from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "./App.css";
+import Layout from "./components/Layout/Layout";
 import AboutMe from "./subHeadings/Aboutme";
 import Projects from "./subHeadings/Projects";
 import Education from "./subHeadings/Education";
 import Experience from "./subHeadings/Experience";
-import Footer from "./subHeadings/Footer";
 import Skills from "./subHeadings/Skills";
+import pic from "./assets/pic.jpg";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero'); // Default to Home for first glance visibility
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const renderSection = () => {
+    switch (activeSection) {
+      case 'hero':
+        return (
+          <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+            {/* Retro Fuzzy Picture */}
+            <div className="retro-pic-container">
+              <img src={pic} alt="Tarun Hawdia" className="retro-fuzzy-pic" />
+              <div className="retro-pic-overlay"></div>
+            </div>
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+            <div style={{ padding: '20px', zIndex: 1 }}>
+              <h1>TARUN HAWDIA</h1>
+              <h3>FULL STACK ENGINEER</h3>
+              <p>Ready to deploy.</p>
+            </div>
+            
+            <div style={{ marginTop: '40px', borderTop: '1px dashed var(--color-primary-dim)', paddingTop: '20px' }}>
+              <h4 style={{ marginBottom: '20px' }}>COMMUNICATION CHANNELS</h4>
+              <div style={{ display: 'flex', gap: '30px', justifyContent: 'center' }}>
+                 <a href="https://linkedin.com/in/tarunhawdia" target="_blank" style={{color: 'var(--color-primary)', fontSize: '1.2rem'}}>[ LINKEDIN ]</a>
+                 <a href="https://github.com/Tarunhawdia" target="_blank" style={{color: 'var(--color-primary)', fontSize: '1.2rem'}}>[ GITHUB ]</a>
+                 <a href="mailto:tarunhawdia@gmail.com" style={{color: 'var(--color-primary)', fontSize: '1.2rem'}}>[ EMAIL ]</a>
+              </div>
+            </div>
+          </div>
+        );
+      case 'about':
+        return <AboutMe />;
+      case 'experience':
+        return <Experience />;
+      case 'projects':
+        return <Projects />;
+      case 'skills':
+        return <Skills />;
+      case 'education':
+        return <Education />;
+      default:
+        return <AboutMe />;
+    }
   };
 
   return (
-    <>
-      <div className="main-container">
-        <div className="navbar">
-          <h1 className="Tarun_Hawdia">Tarun Hawdia</h1>
-          <div className="social-links">
-            <a
-              href="https://drive.google.com/drive/folders/1xoFpk5gHjkW9pYoVccOJsO5IfAHzU74B?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              download
-              title="Resume"
-            >
-              <i className="fas fa-download"></i>
-            </a>
-            <a
-              href="https://github.com/Tarunhawdia"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              title="GitHub"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-            <a
-              href="https://linkedin.com/in/tarunhawdia"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              title="LinkedIn"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://x.com/HawdiaTarun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              title="Twitter"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-          </div>
-        </div>
-
-        {/* Menu button for small screens */}
-        <button className="menu-button" onClick={toggleMenu}>
-          ☰ MENU
-        </button>
-
-        <div className="inside_container">
-          <div className={`sidebar ${menuOpen ? "open" : ""}`}>
-            <ul>
-              <li>
-                <a href="#about" onClick={closeMenu}>
-                  About Me
-                </a>
-              </li>
-              <li>
-                <a href="#skills" onClick={closeMenu}>
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#experience" onClick={closeMenu}>
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="#projects" onClick={closeMenu}>
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#Education" onClick={closeMenu}>
-                  Education
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="section_main">
-            <AboutMe />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Education />
-          </div>
-          <button className="go-to-top" onClick={goToTop}>
-            ↑ Go to Top
-          </button>
-        </div>
-
-        <Footer />
-      </div>
-    </>
+    <Layout currentSection={activeSection} onNavigate={setActiveSection}>
+      {renderSection()}
+    </Layout>
   );
 }
 
