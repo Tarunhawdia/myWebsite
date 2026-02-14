@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import TerminalFooter from './TerminalFooter';
 
@@ -9,10 +9,19 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children, currentSection, onNavigate }) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div style={{
       display: 'grid',
-      gridTemplateColumns: '250px 1fr',
+      gridTemplateColumns: isMobile ? '1fr' : '250px 1fr',
       gridTemplateRows: '1fr 40px',
       height: '100vh',
       width: '100vw',
@@ -20,20 +29,58 @@ const Layout: React.FC<LayoutProps> = ({ children, currentSection, onNavigate })
       backgroundImage: 'radial-gradient(circle at center, #1a1a1a 0%, #000 100%)'
     }}>
       {/* Sidebar Area */}
-      <div style={{ gridColumn: '1 / 2', gridRow: '1 / 2', overflow: 'hidden' }}>
-        <Sidebar currentSection={currentSection} onNavigate={onNavigate} />
+      <div style={{ 
+        gridColumn: isMobile ? '1 / 2' : '1 / 2', 
+        gridRow: '1 / 2', 
+        overflow: 'hidden',
+        zIndex: 1001,
+        pointerEvents: isMobile && !isSidebarOpen ? 'none' : 'auto'
+      }}>
+        <Sidebar 
+          currentSection={currentSection} 
+          onNavigate={onNavigate} 
+          isOpen={isSidebarOpen} 
+          onClose={() => setSidebarOpen(false)} 
+        />
       </div>
 
       {/* Main Content Area - The "Screen" */}
       <main style={{
-        gridColumn: '2 / 3',
+        gridColumn: isMobile ? '1 / 2' : '2 / 3',
         gridRow: '1 / 2',
         position: 'relative',
         overflow: 'hidden',
-        padding: '20px',
+        padding: isMobile ? '10px' : '20px',
         display: 'flex',
         flexDirection: 'column'
       }}>
+        {/* Mobile Header with Menu Button */}
+        {isMobile && (
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '10px',
+            padding: '0 5px'
+          }}>
+            <h2 style={{ fontSize: '1rem', margin: 0 }}>SYS_OED_V1.1</h2>
+            <button 
+              onClick={() => setSidebarOpen(true)}
+              style={{
+                background: 'var(--color-glass)',
+                border: '1px solid var(--color-primary)',
+                color: 'var(--color-primary)',
+                padding: '5px 10px',
+                fontFamily: 'var(--font-mono)',
+                cursor: 'pointer',
+                boxShadow: '0 0 5px var(--color-primary-dim)'
+              }}
+            >
+              [ MENU ]
+            </button>
+          </div>
+        )}
+
         {/* CRT Screen Frame/Bezel Effect inside the viewport */}
         <div style={{
           flex: 1,
@@ -43,7 +90,7 @@ const Layout: React.FC<LayoutProps> = ({ children, currentSection, onNavigate })
           boxShadow: 'inset 0 0 20px rgba(0,0,0,0.8)',
           overflowY: 'auto',
           position: 'relative',
-          padding: '20px'
+          padding: isMobile ? '10px' : '20px'
         }}>
            {/* Grid Start Decoration */}
            <div style={{
