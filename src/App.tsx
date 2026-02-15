@@ -24,7 +24,10 @@ function App() {
             <div style={{ padding: '20px', zIndex: 1 }}>
               <h1>TARUN HAWDIA</h1>
               <h3>SOFTWARE ENGINEER</h3>
-              <p>Ready to deploy.</p>
+              <p style={{ maxWidth: '500px', margin: '15px auto', fontSize: '1.1rem', color: 'var(--color-primary)', opacity: 0.9 }}>
+                M.Tech from IIT Guwahati. Building scalable backend systems and high-performance real-time pipelines.
+              </p>
+              <p style={{ marginTop: '10px' }}>Ready to deploy.</p>
             </div>
             
             <div style={{ marginTop: '40px', borderTop: '1px dashed var(--color-primary-dim)', paddingTop: '20px' }}>
