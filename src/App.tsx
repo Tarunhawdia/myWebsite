@@ -23,7 +23,7 @@ function App() {
 
             <div style={{ padding: '20px', zIndex: 1 }}>
               <h1>TARUN HAWDIA</h1>
-              <h3>FULL STACK ENGINEER</h3>
+              <h3>SOFTWARE ENGINEER</h3>
               <p>Ready to deploy.</p>
             </div>
             
