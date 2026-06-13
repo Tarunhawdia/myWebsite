@@ -1,0 +1,71 @@
+.edu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu__row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  will-change: transform;
+}
+.edu__row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.edu__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: var(--paper-2);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.edu__logo img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.edu__info {
+  flex-grow: 1;
+}
+.edu__name {
+  font-size: 1.2rem;
+  margin: 0 0 0.2rem;
+}
+.edu__degree {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.edu__score {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.edu__arrow {
+  font-size: 1.3rem;
+  color: var(--muted);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.edu__row:hover .edu__arrow {
+  color: var(--ink);
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 560px) {
+  .edu__row {
+    gap: 1rem;
+  }
+  .edu__arrow {
+    display: none;
+  }
+}

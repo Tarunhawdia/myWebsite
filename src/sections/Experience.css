@@ -1,0 +1,86 @@
+.exp__timeline {
+  position: relative;
+  padding-left: 2.2rem;
+}
+
+.exp__line {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--line);
+  transform-origin: top;
+}
+
+.exp__item {
+  position: relative;
+  padding-bottom: 2.8rem;
+}
+.exp__item:last-child {
+  padding-bottom: 0;
+}
+
+.exp__dot {
+  position: absolute;
+  left: calc(-2.2rem + 0px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+
+.exp__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.exp__head h3 {
+  font-size: 1.3rem;
+}
+.exp__period {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.exp__role {
+  margin: 0.25rem 0 0.9rem;
+  font-style: italic;
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+}
+
+.exp__points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.exp__points li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+.exp__points li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 520px) {
+  .exp__period {
+    width: 100%;
+  }
+}
