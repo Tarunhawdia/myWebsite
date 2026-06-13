@@ -1,0 +1,24 @@
+.theme-toggle {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+.theme-toggle:hover {
+  border-color: var(--ink);
+  color: var(--accent);
+}
+
+.theme-toggle__icon {
+  display: grid;
+  place-items: center;
+  line-height: 0;
+}
