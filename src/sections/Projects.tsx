@@ -8,6 +8,7 @@ import logoHttp from "../assets/httpserver.png";
 import logoHeart from "../assets/heartprediction.png";
 import logoPaddle from "../assets/paddle.png";
 import logoNotification from "../assets/notification.svg";
+import logoDedup from "../assets/dedup.svg";
 import "./Projects.css";
 
 const projects = [
@@ -28,6 +29,15 @@ const projects = [
     href: "https://github.com/Tarunhawdia/notification-manager",
     repo: "https://github.com/Tarunhawdia/notification-manager",
     logo: logoNotification,
+  },
+  {
+    title: "Dedup — Duplicate File Finder",
+    tag: "Go · Concurrency · CLI",
+    description:
+      "A blazing-fast CLI that finds and removes duplicate files using a staged size → quick-hash → full-SHA-256 pipeline over a worker pool. Scans gigabytes in milliseconds.",
+    href: "https://github.com/Tarunhawdia/dedup",
+    repo: "https://github.com/Tarunhawdia/dedup",
+    logo: logoDedup,
   },
   {
     title: "Real-time Chat App",
