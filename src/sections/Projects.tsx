@@ -7,6 +7,7 @@ import logoThesis from "../assets/deeplearning.jpeg";
 import logoHttp from "../assets/httpserver.png";
 import logoHeart from "../assets/heartprediction.png";
 import logoPaddle from "../assets/paddle.png";
+import logoNotification from "../assets/notification.svg";
 import "./Projects.css";
 
 const projects = [
@@ -18,6 +19,15 @@ const projects = [
     href: "https://my-chess-app-one.vercel.app/",
     repo: "https://github.com/Tarunhawdia/myChessApp",
     logo: logoChess,
+  },
+  {
+    title: "Notification Manager",
+    tag: "React Native · Kotlin · Android",
+    description:
+      "A privacy-focused Android app that auto-suppresses notifications from apps you haven't used recently, keeping your status bar clean.",
+    href: "https://github.com/Tarunhawdia/notification-manager",
+    repo: "https://github.com/Tarunhawdia/notification-manager",
+    logo: logoNotification,
   },
   {
     title: "Real-time Chat App",
