@@ -1,25 +1,31 @@
 :root {
-  /* Palette — warm paper, ink, single crimson accent */
-  --paper: #faf9f6;
-  --paper-2: #f1efe9;
-  --ink: #1a1a1a;
-  --ink-soft: #3d3d3d;
-  --muted: #8a8a82;
-  --line: #e3e0d8;
-  --accent: #b91c1c;
-  --accent-soft: #f5d9d9;
+  /* PINEWOOD — light: warm parchment / bone, green-black ink, antique brass.
+     The board's lighter "buff" square. */
+  --paper: #f4efe2;
+  --paper-2: #e9e3d2;
+  --ink: #21281f;
+  --ink-soft: #495043;
+  --muted: #8b8a78;
+  --line: #ddd6c4;
+  --accent: #8c6a1c; /* deep antique brass — legible on parchment */
+  --accent-soft: #ecdcb4;
+  --accent-2: #2f6f4e; /* forest secondary */
 
   /* Themed surfaces / effects */
-  --nav-bg: rgba(250, 249, 246, 0.82);
-  --footer-bg: #1a1a1a;
-  --footer-text: #faf9f6;
-  --grain: rgba(26, 26, 26, 0.04);
-  --shadow: rgba(26, 26, 26, 0.35);
-  --card-bg: #ffffff;
+  --nav-bg: rgba(244, 239, 226, 0.82);
+  --footer-bg: #18201a;
+  --footer-text: #f1ecdf;
+  --grain: rgba(33, 40, 31, 0.045);
+  --shadow: rgba(24, 32, 24, 0.28);
+  --card-bg: #fbf8f0;
+  /* Alternating band — the board's darker square. Derived perceptually (OKLab)
+     by stepping the paper toward the green ink, so it's a clean tonal step on
+     the same hue, never a muddy off-color. */
+  --band: color-mix(in oklab, var(--paper) 90%, var(--ink));
 
   /* Type */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
   --mono: "Space Mono", "SFMono-Regular", monospace;
 
   /* Rhythm */
@@ -30,21 +36,26 @@
 }
 
 :root[data-theme="dark"] {
-  --paper: #121113;
-  --paper-2: #1b1a1d;
-  --ink: #f3f1ea;
-  --ink-soft: #c6c3ba;
-  --muted: #8c8980;
-  --line: #2b2a2e;
-  --accent: #f1594a;
-  --accent-soft: #3a201d;
+  /* PINEWOOD — dark: deep tournament-felt pine, warm parchment text, brass. */
+  --paper: #0e1512;
+  --paper-2: #14201b;
+  --ink: #ece7d8;
+  --ink-soft: #b4b6a2;
+  --muted: #74806d;
+  --line: #233029;
+  --accent: #c8a24a; /* brass / chess-gold */
+  --accent-soft: #2b2917;
+  --accent-2: #4f9d76; /* sage secondary */
 
-  --nav-bg: rgba(18, 17, 19, 0.78);
-  --footer-bg: #0c0c0e;
-  --footer-text: #f3f1ea;
-  --grain: rgba(255, 255, 255, 0.035);
+  --nav-bg: rgba(14, 21, 18, 0.8);
+  --footer-bg: #0a100c;
+  --footer-text: #ece7d8;
+  --grain: rgba(236, 231, 216, 0.035);
   --shadow: rgba(0, 0, 0, 0.6);
-  --card-bg: #1a191c;
+  --card-bg: #14201b;
+  /* The band steps the pine *toward black* — a recessed groove between
+     sections — so the lighter pine cards keep floating cleanly above it. */
+  --band: color-mix(in oklab, var(--paper) 70%, #000);
 
   color-scheme: dark;
 }
@@ -55,6 +66,7 @@
 
 /* Smooth the cross-fade when switching themes */
 body,
+.section,
 .card,
 .nav,
 .footer,
@@ -159,6 +171,18 @@ img {
 .section {
   padding: clamp(4rem, 9vw, 7rem) 0;
   border-top: 1px solid var(--line);
+}
+
+/* Alternating contrast bands so each section reads as its own block.
+   Base sections (about, work, edu) sit on --paper; the others step onto
+   --band. The faint grain texture is carried across both for consistency. */
+.exp,
+.skills,
+.int {
+  background-color: var(--band);
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--grain) 1px, transparent 0);
+  background-size: 22px 22px;
 }
 
 /* Eyebrow / kicker label above each section */

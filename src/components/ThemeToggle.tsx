@@ -18,7 +18,7 @@ const ThemeToggle = () => {
       /* ignore */
     }
     const m = document.querySelector('meta[name="theme-color"]');
-    if (m) m.setAttribute("content", theme === "dark" ? "#121113" : "#faf9f6");
+    if (m) m.setAttribute("content", theme === "dark" ? "#0e1512" : "#f4efe2");
   }, [theme]);
 
   const isDark = theme === "dark";
