@@ -10,7 +10,7 @@ const schools = [
     logo: iitg,
     name: "Indian Institute of Technology, Guwahati",
     degree: "M.Tech — Biomedical Science & Technology",
-    score: "8.8 / 10 CGPA · Gold Medalist",
+    score: "8.8 / 10 CGPA",
     href: "https://www.iitg.ac.in",
   },
   {

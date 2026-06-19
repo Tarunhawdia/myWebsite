@@ -62,7 +62,7 @@ const Experience = () => {
     <section id="experience" className="section exp">
       <div className="shell">
         <Reveal>
-          <span className="kicker">02 — Experience</span>
+          <span className="kicker">03 — Experience</span>
         </Reveal>
         <Reveal>
           <h2 className="section-title">Where I&apos;ve worked</h2>

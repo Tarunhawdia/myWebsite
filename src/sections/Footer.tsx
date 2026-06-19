@@ -26,11 +26,11 @@ const Footer = () => {
 
         <Reveal delay={0.1}>
           <motion.a
-            href="mailto:tarunhawdia@gmail.com"
+            href="mailto:tarunhawdiya112@gmail.com"
             className="footer__mail"
             whileHover={{ x: 6 }}
           >
-            tarunhawdia@gmail.com <span aria-hidden="true">→</span>
+            tarunhawdiya112@gmail.com <span aria-hidden="true">→</span>
           </motion.a>
         </Reveal>
 

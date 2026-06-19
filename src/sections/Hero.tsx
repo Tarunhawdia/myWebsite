@@ -18,7 +18,7 @@ const pieces = [
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/tarunhawdia" },
   { label: "GitHub", href: "https://github.com/Tarunhawdia" },
-  { label: "Email", href: "mailto:tarunhawdia@gmail.com" },
+  { label: "Email", href: "mailto:tarunhawdiya112@gmail.com" },
 ];
 
 const Hero = () => {
@@ -39,8 +39,18 @@ const Hero = () => {
             }}
             transition={{
               opacity: { duration: 1.4, delay: 0.4 + p.delay },
-              y: { duration: 7 + i, repeat: Infinity, ease: "easeInOut", delay: p.delay },
-              rotate: { duration: 9 + i, repeat: Infinity, ease: "easeInOut", delay: p.delay },
+              y: {
+                duration: 7 + i,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: p.delay,
+              },
+              rotate: {
+                duration: 9 + i,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: p.delay,
+              },
             }}
           >
             {p.char}
@@ -81,7 +91,11 @@ const Hero = () => {
                       className="hero__letter"
                       initial={{ opacity: 0, y: "0.5em" }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, ease, delay: 0.25 + (offset + i) * 0.04 }}
+                      transition={{
+                        duration: 0.6,
+                        ease,
+                        delay: 0.25 + (offset + i) * 0.04,
+                      }}
                     >
                       {ch}
                     </motion.span>

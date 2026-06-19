@@ -6,7 +6,7 @@ import "./About.css";
 const stats = [
   { value: "2+", label: "Years building" },
   { value: "500+", label: "DSA solved" },
-  { value: "Gold", label: "IITG medalist" },
+  { value: "Gold", label: "IITG Chess medalist" },
 ];
 
 const About = () => {
