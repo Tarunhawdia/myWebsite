@@ -62,7 +62,7 @@ const Experience = () => {
     <section id="experience" className="section exp">
       <div className="shell">
         <Reveal>
-          <span className="kicker">03 — Experience</span>
+          <span className="kicker">02 — Experience</span>
         </Reveal>
         <Reveal>
           <h2 className="section-title">Where I&apos;ve worked</h2>
@@ -85,14 +85,22 @@ const Experience = () => {
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={viewport}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.05 }}
+              transition={{
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1],
+                delay: i * 0.05,
+              }}
             >
               <motion.span
                 className="exp__dot"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={viewport}
-                transition={{ duration: 0.4, delay: 0.15 + i * 0.05, ease: "backOut" }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.15 + i * 0.05,
+                  ease: "backOut",
+                }}
               />
               <div className="exp__head">
                 <h3>{exp.company}</h3>
